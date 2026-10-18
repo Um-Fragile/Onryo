@@ -1,0 +1,17 @@
+/* Onryo – Light theme */
+:root {
+  --bg:           #f6f8fa;
+  --sidebar-bg:   #ffffff;
+  --card-bg:      #ffffff;
+  --border:       #d0d7de;
+  --border-dim:   #eaeef2;
+  --text:         #1f2328;
+  --text-muted:   #656d76;
+  --text-dim:     #adbac7;
+  --accent:       #0969da;
+  --accent-dim:   #ddf4ff;
+  --input-bg:     #f6f8fa;
+  --log-bg:       #f6f8fa;
+  --log-text:     #116329;
+  --font-base:    system-ui, -apple-system, 'Segoe UI', sans-serif;
+}

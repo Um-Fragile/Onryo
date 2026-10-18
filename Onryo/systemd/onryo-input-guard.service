@@ -1,0 +1,17 @@
+[Unit]
+Description=Onryo Input Guard – evdev grab/release on display hotplug
+After=onryo-core.service
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/onryo
+ExecStart=/opt/onryo/venv/bin/python -m backend.input_guard.input_guard
+Restart=on-failure
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+Environment=ONRYO_LOCKOUT_CONFIG=/etc/onryo/input-lockout.json
+
+[Install]
+WantedBy=multi-user.target

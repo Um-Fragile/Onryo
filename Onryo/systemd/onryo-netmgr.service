@@ -1,0 +1,16 @@
+[Unit]
+Description=Onryo Network Manager – bridge, AP, and client connections
+After=NetworkManager.service
+Before=onryo-core.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+User=root
+WorkingDirectory=/opt/onryo
+ExecStart=/opt/onryo/backend/network_manager/netmgr-boot.sh
+StandardOutput=append:/var/log/onryo/netmgr.log
+StandardError=append:/var/log/onryo/netmgr.log
+
+[Install]
+WantedBy=multi-user.target

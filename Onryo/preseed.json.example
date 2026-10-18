@@ -1,0 +1,29 @@
+{
+  "comment": "Preseed file for unattended Onryo install. Pass with: sudo ./install.sh --non-interactive --config preseed.json",
+  "admin_password": "changeme123",
+  "wifi_ssid": "MyHomeNetwork",
+  "wifi_psk": "mywifipassword",
+  "ap_ssid": "OnryoAP",
+  "ap_psk": "onryo1234",
+  "ap_channel": 6,
+  "ap_band": "bg",
+  "ap_ip": "192.168.42.1",
+  "dhcp_start": "192.168.42.10",
+  "dhcp_end": "192.168.42.100",
+  "input_lockout": true,
+  "input_lockout_grace_seconds": 5,
+  "scan_directories": [
+    "/opt/onryo/plugins",
+    "/opt/onryo/containers"
+  ],
+  "adapter_roles": {
+    "comment": "Map MAC addresses to roles. Leave empty to assign roles from the GUI later.",
+    "aa:bb:cc:dd:ee:01": "uplink",
+    "aa:bb:cc:dd:ee:02": "client",
+    "aa:bb:cc:dd:ee:03": "ap",
+    "aa:bb:cc:dd:ee:04": "pentest"
+  },
+  "enable_minecraft": false,
+  "session_ttl_hours": 12,
+  "theme": "dark"
+}

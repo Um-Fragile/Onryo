@@ -1,0 +1,17 @@
+/* Onryo – Dark theme */
+:root {
+  --bg:           #0f1117;
+  --sidebar-bg:   #161b22;
+  --card-bg:      #1c2230;
+  --border:       #30363d;
+  --border-dim:   #21262d;
+  --text:         #e6edf3;
+  --text-muted:   #8b949e;
+  --text-dim:     #484f58;
+  --accent:       #58a6ff;
+  --accent-dim:   #1f3a5f;
+  --input-bg:     #0d1117;
+  --log-bg:       #010409;
+  --log-text:     #7ee787;
+  --font-base:    system-ui, -apple-system, 'Segoe UI', sans-serif;
+}

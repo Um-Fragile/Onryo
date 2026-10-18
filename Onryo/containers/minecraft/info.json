@@ -1,0 +1,10 @@
+{
+  "name": "Minecraft Server",
+  "description": "itzg/minecraft-server Docker Compose stack. Paper, configurable via settings.yaml.",
+  "type": "docker",
+  "entrypoint": "run.sh",
+  "log_location": "/var/log/onryo/minecraft.log",
+  "settings_file": "settings.yaml",
+  "version": "1.0.0",
+  "enabled_by_default": false
+}

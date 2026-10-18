@@ -1,0 +1,17 @@
+/* Onryo – High Contrast theme */
+:root {
+  --bg:           #000000;
+  --sidebar-bg:   #000000;
+  --card-bg:      #000000;
+  --border:       #ffffff;
+  --border-dim:   #444444;
+  --text:         #ffffff;
+  --text-muted:   #cccccc;
+  --text-dim:     #888888;
+  --accent:       #ffff00;
+  --accent-dim:   #1a1a00;
+  --input-bg:     #111111;
+  --log-bg:       #000000;
+  --log-text:     #00ff00;
+  --font-base:    system-ui, -apple-system, 'Segoe UI', sans-serif;
+}

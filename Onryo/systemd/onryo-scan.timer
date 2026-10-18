@@ -1,0 +1,10 @@
+[Unit]
+Description=Onryo Scanner – periodic rescan timer
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=60s
+Unit=onryo-scan.service
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,23 @@
+[Unit]
+Description=Onryo Core – API server and web GUI
+Documentation=file:///opt/onryo/docs/
+After=network-online.target docker.service onryo-scanner.service onryo-netmgr.service
+Wants=network-online.target
+Requires=onryo-scanner.service
+
+[Service]
+Type=simple
+User=onryo
+Group=onryo
+WorkingDirectory=/opt/onryo
+ExecStart=/opt/onryo/venv/bin/uvicorn backend.api.app:app --host 0.0.0.0 --port 8080 --workers 2
+Restart=on-failure
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+Environment=ONRYO_DB=/opt/onryo/onryo.db
+Environment=ONRYO_FRONTEND=/opt/onryo/frontend
+Environment=ONRYO_HELPER=/opt/onryo/privileged_helper/helper.sh
+
+[Install]
+WantedBy=multi-user.target

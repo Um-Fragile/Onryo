@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Onryo</title>
+  <!-- theme-css swapped at runtime by app.js Theme module -->
+  <link rel="stylesheet" href="/static/themes/dark.css" id="theme-css" />
+  <link rel="stylesheet" href="/static/app.css" />
+</head>
+<body>
+
+  <!-- ===== Login page (shown when unauthenticated) ===== -->
+  <div id="page-login" hidden></div>
+
+  <!-- ===== App shell (hidden until authed) ===== -->
+  <div id="app-shell">
+    <!-- Sidebar navigation -->
+    <nav class="sidebar">
+      <div class="sidebar-logo">
+        <span class="logo-icon">&#9760;</span>
+        <span class="logo-text">Onryo</span>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="#dashboard" class="nav-link" data-page="dashboard">Dashboard</a></li>
+        <li><a href="#services"  class="nav-link" data-page="services">Services</a></li>
+        <li><a href="#network"   class="nav-link" data-page="network">Network</a></li>
+        <li><a href="#docker"    class="nav-link" data-page="docker">Docker</a></li>
+        <li><a href="#system"    class="nav-link" data-page="system">System</a></li>
+      </ul>
+
+      <div class="sidebar-footer">
+        <button id="theme-toggle" class="btn btn-ghost" title="Cycle theme">&#9728;&#65039;</button>
+        <button id="logout-btn"   class="btn btn-ghost" title="Log out">&#128682;</button>
+      </div>
+    </nav>
+
+    <!-- Main content -->
+    <main class="content">
+      <div id="page-dashboard" hidden></div>
+      <div id="page-services"  hidden></div>
+      <div id="page-network"   hidden></div>
+      <div id="page-docker"    hidden></div>
+      <div id="page-system"    hidden></div>
+    </main>
+  </div><!-- /#app-shell -->
+
+  <!-- ===== Scripts ===== -->
+  <!-- Core router + API client + theme (must load first) -->
+  <script src="/static/app.js"></script>
+
+  <!-- Page controllers -->
+  <script src="/static/login/login.js"></script>
+  <script src="/static/dashboard/dashboard.js"></script>
+  <script src="/static/services/services.js"></script>
+  <script src="/static/network/network.js"></script>
+  <script src="/static/docker/docker.js"></script>
+  <script src="/static/system/system.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+# Minecraft server settings
+# Edit these values and click Save in the Onryo Settings editor.
+# Changes take effect after restarting the container from the Docker page.
+
+eula: "TRUE"
+type: PAPER
+version: LATEST
+memory: 2G
+difficulty: normal
+max_players: 20
+motd: "Onryo Minecraft Server"
+seed: ""
+port: 25565
