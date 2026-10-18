@@ -1,5 +1,0 @@
-# example-script settings
-# Edit and save from the Onryo Settings editor; the service restarts automatically.
-
-interval: 30       # seconds between heartbeat messages
-log_level: INFO    # DEBUG | INFO | WARNING | ERROR
